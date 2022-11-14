@@ -84,9 +84,13 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+
   letter-spacing: 0.03em;
   line-height: 1.71;
   color: var(--main-text-color);
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+  }
 }
 
 .contact-form__checkbox {
