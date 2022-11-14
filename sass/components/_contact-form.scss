@@ -144,7 +144,7 @@
 }
 
 .contact-form-button {
-  @extend %main-button;
+  @include main-button;
   padding: 10px 52px;
   margin: 0 auto;
 }

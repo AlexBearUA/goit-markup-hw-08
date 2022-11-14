@@ -1,15 +1,23 @@
-// .sign-us {
-//   margin-left: auto;
-// }
+.sign-us {
+  @include for-desktop {
+    margin-left: auto;
+  }
+}
 
-// .sign-us__form {
-//   display: flex;
-//   gap: 12px;
-// }
+.sign-us__form {
+  @include for-desktop {
+    display: flex;
+    gap: 12px;
+  }
+}
 
 .sign-us__label {
   display: block;
+
   margin-bottom: 20px;
+  @include for-desktop {
+    margin-bottom: 0;
+  }
 }
 
 .sign-us__input {
@@ -54,7 +62,7 @@
   @include main-button;
   display: inline-flex;
   gap: 10px;
-  padding: 10px 30px;
+  padding: 10px 28px;
 }
 
 .sign-us__icon {

@@ -4,22 +4,30 @@
 }
 
 .footer__content {
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
   text-align: center;
-  // display: flex;
-  // gap: 70px;
-  // align-items: baseline;
-}
-
-.footer__nav {
-  margin-bottom: 60px;
-  @include for-tablet {
-    display: flex;
-    justify-content: space-between;
+  @include for-desktop {
+    flex-direction: row;
+    align-items: baseline;
+    text-align: left;
   }
 }
 
-.find-us {
-  margin-bottom: 60px;
+.footer__elements-position {
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  @include for-tablet {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0;
+    justify-content: space-around;
+  }
+  @include for-desktop {
+    gap: 70px;
+  }
 }
 
 .find-us__item:not(:last-child) {
