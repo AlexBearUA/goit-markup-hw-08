@@ -1,20 +1,33 @@
 .advantages {
-  display: flex;
+  @include for-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .advantages__item {
   list-style-type: none;
-  width: 25%;
+  max-width: 450px;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include for-tablet {
+    width: 354px;
+  }
+  @include for-desktop {
+    width: 270px;
   }
 }
 
 .advantages__thumb {
   @include centeredFlex();
-  width: 270px;
-  height: 120px;
+  padding: 25px 0;
+
   margin-bottom: 30px;
 
   background-color: #f5f4fa;
@@ -22,6 +35,7 @@
 }
 
 .advantages__title {
+  text-align: center;
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -30,6 +44,9 @@
   color: var(--title-text-color);
   text-transform: uppercase;
   font-size: inherit;
+  @include for-tablet {
+    text-align: left;
+  }
 }
 
 .advantages__text {

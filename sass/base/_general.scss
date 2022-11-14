@@ -28,11 +28,25 @@ img {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include for-phone {
+    width: 480px;
+  }
+
+  @include for-tablet {
+    width: 768px;
+  }
+
+  @include for-desktop {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include for-desktop {
+    padding: 94px 0;
+  }
 }

@@ -1,16 +1,27 @@
 .regular-clients {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
 }
 
 .regular-clients__item {
-  list-style: none;
+  width: 210px;
+
+  @media screen and (max-width: 479px) {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  @include for-tablet {
+    width: 226px;
+  }
+  @include for-desktop {
+    width: 170px;
+  }
 }
 
 .regular-clients__link {
-  width: 170px;
-  height: 92px;
+  padding: 16px 0;
   @include centeredFlex();
   color: #afb1b8;
   border: 1px solid #afb1b8;

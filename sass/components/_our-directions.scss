@@ -1,5 +1,8 @@
-.section--padding-top {
+.our-directions-section {
   padding: 0 0 94px 0;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .our-directions {
