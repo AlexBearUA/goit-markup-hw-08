@@ -1,8 +1,18 @@
 .projects-filtr {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 8px;
-  margin-bottom: 50px;
+  row-gap: 15px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 420px;
+    justify-content: start;
+    margin-bottom: 40px;
+  }
+  @include for-desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .projects-filtr__button {

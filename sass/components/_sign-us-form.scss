@@ -14,9 +14,8 @@
 .sign-us__label {
   display: block;
 
-  margin-bottom: 20px;
-  @include for-desktop {
-    margin-bottom: 0;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
   }
 }
 

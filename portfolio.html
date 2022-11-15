@@ -23,10 +23,20 @@
     <header class="header">
       <div class="container">
         <div class="header__navigation">
-          <nav class="header__main-nav">
-            <a class="logo header__logo" href="./index.html"
-              >Web<span class="logo__ending-header">Studio</span></a
-            >
+          <a class="logo header__logo" href="./index.html"
+            >Web<span class="logo__ending-header">Studio</span></a
+          >
+
+          <button
+            class="mobile-menu__button-open js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="mobile-menu__icon">
+              <use href="./images/icons.svg#menu-mobile"></use>
+            </svg>
+          </button>
+          <div class="header-menu">
             <ul class="header__nav-list">
               <li class="header__nav-item">
                 <a class="header__nav-link" href="./index.html">Студія</a>
@@ -38,29 +48,30 @@
               </li>
               <li class="header__nav-item"><a class="header__nav-link" href="#">Контакти</a></li>
             </ul>
-          </nav>
 
-          <ul class="header__contacts-list">
-            <li class="header__contacts-item">
-              <a class="header__contacts-link" href="mailto:info@devstudio.com">
-                <svg class="header__contacts-icon" width="16" height="12">
-                  <use href="./images/icons.svg#envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="header__contacts-item">
-              <a class="header__contacts-link" href="tel:+380961111111">
-                <svg class="header__contacts-icon" width="10" height="16">
-                  <use href="./images/icons.svg#smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+            <ul class="header__contacts-list">
+              <li class="header__contacts-item">
+                <a class="header__contacts-link" href="mailto:info@devstudio.com">
+                  <svg class="header__contacts-icon" width="16" height="12">
+                    <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="header__contacts-item">
+                <a class="header__contacts-link" href="tel:+380961111111">
+                  <svg class="header__contacts-icon" width="10" height="16">
+                    <use href="./images/icons.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
+
     <main>
       <!-- Our projects section -->
       <section class="section">
@@ -92,7 +103,19 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="our-projects__overlay-borders">
-                  <img src="./images/technocrack.jpg" alt="відкрита сторінка сайту" width="370" />
+                  <img
+                    srcset="
+                      ../images/our-projects/technocrack_phone_450.jpg     450w,
+                      ../images/our-projects/technocrack_phone_450x2.jpg   900w,
+                      ../images/our-projects/technocrack_tablet_354.jpg    354w,
+                      ../images/our-projects/technocrack_tablet_354x2.jpg  708w,
+                      ../images/our-projects/technocrack_desktop_370.jpg   370w,
+                      ../images/our-projects/technocrack_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/technocrack_tablet_354.jpg"
+                    alt="відкрита сторінка сайту"
+                  />
 
                   <p class="our-projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -115,7 +138,19 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="our-projects__overlay-borders">
-                  <img src="./images/poster.jpg" alt="постер з двома баскетболістами" width="370" />
+                  <img
+                    srcset="
+                      ../images/our-projects/neworlean_phone_450.jpg     450w,
+                      ../images/our-projects/neworlean_phone_450x2.jpg   900w,
+                      ../images/our-projects/neworlean_tablet_354.jpg    354w,
+                      ../images/our-projects/neworlean_tablet_354x2.jpg  708w,
+                      ../images/our-projects/neworlean_desktop_370.jpg   370w,
+                      ../images/our-projects/neworlean_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/neworlean_tablet_354.jpg"
+                    alt="постер з двома баскетболістами"
+                  />
 
                   <p class="our-projects__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dignissimos quos
@@ -137,9 +172,17 @@
               >
                 <div class="our-projects__overlay-borders">
                   <img
-                    src="./images/seafood.jpg"
+                    srcset="
+                      ../images/our-projects/seafood_phone_450.jpg     450w,
+                      ../images/our-projects/seafood_phone_450x2.jpg   900w,
+                      ../images/our-projects/seafood_tablet_354.jpg    354w,
+                      ../images/our-projects/seafood_tablet_354x2.jpg  708w,
+                      ../images/our-projects/seafood_desktop_370.jpg   370w,
+                      ../images/our-projects/seafood_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/seafood_tablet_354.jpg"
                     alt="емблема ресторану у вигляді риби"
-                    width="370"
                   />
 
                   <p class="our-projects__overlay">
@@ -162,7 +205,19 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="our-projects__overlay-borders">
-                  <img src="./images/prime.jpg" alt="навушники" width="370" />
+                  <img
+                    srcset="
+                      ../images/our-projects/prime_phone_450.jpg     450w,
+                      ../images/our-projects/prime_phone_450x2.jpg   900w,
+                      ../images/our-projects/prime_tablet_354.jpg    354w,
+                      ../images/our-projects/prime_tablet_354x2.jpg  708w,
+                      ../images/our-projects/prime_desktop_370.jpg   370w,
+                      ../images/our-projects/prime_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/prime_tablet_354.jpg"
+                    alt="навушники"
+                  />
 
                   <p class="our-projects__overlay">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente distinctio
@@ -184,7 +239,19 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="our-projects__overlay-borders">
-                  <img src="./images/boxes.jpg" alt="дві коробки" width="370" />
+                  <img
+                    srcset="
+                      ../images/our-projects/boxes_phone_450.jpg     450w,
+                      ../images/our-projects/boxes_phone_450x2.jpg   900w,
+                      ../images/our-projects/boxes_tablet_354.jpg    354w,
+                      ../images/our-projects/boxes_tablet_354x2.jpg  708w,
+                      ../images/our-projects/boxes_desktop_370.jpg   370w,
+                      ../images/our-projects/boxes_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/boxes_tablet_354.jpg"
+                    alt="дві коробки"
+                  />
 
                   <p class="our-projects__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore enim
@@ -206,7 +273,19 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="our-projects__overlay-borders">
-                  <img src="./images/inspiration.jpg" alt="моноблок" width="370" />
+                  <img
+                    srcset="
+                      ../images/our-projects/inspiration_phone_450.jpg     450w,
+                      ../images/our-projects/inspiration_phone_450x2.jpg   900w,
+                      ../images/our-projects/inspiration_tablet_354.jpg    354w,
+                      ../images/our-projects/inspiration_tablet_354x2.jpg  708w,
+                      ../images/our-projects/inspiration_desktop_370.jpg   370w,
+                      ../images/our-projects/inspiration_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/inspiration_tablet_354.jpg"
+                    alt="моноблок"
+                  />
 
                   <p class="our-projects__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet rem quae minima
@@ -228,7 +307,19 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="our-projects__overlay-borders">
-                  <img src="./images/limeddit.jpg" alt="розгорнутий журнал" width="370" />
+                  <img
+                    srcset="
+                      ../images/our-projects/limited_phone_450.jpg     450w,
+                      ../images/our-projects/limited_phone_450x2.jpg   900w,
+                      ../images/our-projects/limited_tablet_354.jpg    354w,
+                      ../images/our-projects/limited_tablet_354x2.jpg  708w,
+                      ../images/our-projects/limited_desktop_370.jpg   370w,
+                      ../images/our-projects/limited_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/limited_tablet_354.jpg"
+                    alt="розгорнутий журнал"
+                  />
 
                   <p class="our-projects__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum alias, inventore
@@ -250,7 +341,19 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="our-projects__overlay-borders">
-                  <img src="./images/lab.jpg" alt="бірка на мотузці" width="370" />
+                  <img
+                    srcset="
+                      ../images/our-projects/lab_phone_450.jpg     450w,
+                      ../images/our-projects/lab_phone_450x2.jpg   900w,
+                      ../images/our-projects/lab_tablet_354.jpg    354w,
+                      ../images/our-projects/lab_tablet_354x2.jpg  708w,
+                      ../images/our-projects/lab_desktop_370.jpg   370w,
+                      ../images/our-projects/lab_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/lab_tablet_354.jpg"
+                    alt="бірка на мотузці"
+                  />
 
                   <p class="our-projects__overlay">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, consectetur
@@ -271,7 +374,19 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="our-projects__overlay-borders">
-                  <img src="./images/growingbus.jpg" alt="людина працює за ноутбуком" width="370" />
+                  <img
+                    srcset="
+                      ../images/our-projects/growing_phone_450.jpg     450w,
+                      ../images/our-projects/growing_phone_450x2.jpg   900w,
+                      ../images/our-projects/growing_tablet_354.jpg    354w,
+                      ../images/our-projects/growing_tablet_354x2.jpg  708w,
+                      ../images/our-projects/growing_desktop_370.jpg   370w,
+                      ../images/our-projects/growing_desktop_370x2.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (min-width: 320px) 100vw"
+                    src="../images/our-projects/growing_tablet_354.jpg"
+                    alt="людина працює за ноутбуком"
+                  />
 
                   <p class="our-projects__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptas
@@ -293,11 +408,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
-          <div>
-            <a class="logo footer__logo" href="./index.html"
-              >Web<span class="logo__ending-footer">Studio</span></a
-            >
-            <address>
+          <div class="footer__elements-position">
+            <div class="footer__contacts">
+              <a class="logo footer__logo" href="./index.html"
+                >Web<span class="logo__ending-footer">Studio</span></a
+              >
+
               <ul class="find-us">
                 <li class="find-us__item">
                   <a
@@ -315,62 +431,64 @@
                   <a class="find-us__link" href="tel:+380961111111">+38 096 111 11 11</a>
                 </li>
               </ul>
-            </address>
+            </div>
+
+            <div class="join-us">
+              <p class="footer__title">приєднуйтесь</p>
+              <ul class="soc-networks">
+                <li class="soc-networks__item">
+                  <a
+                    class="soc-networks__link soc-networks__link--dark-theme"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    ><svg class="soc-networks__icon">
+                      <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="soc-networks__item">
+                  <a
+                    class="soc-networks__link soc-networks__link--dark-theme"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    <svg class="soc-networks__icon">
+                      <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="soc-networks__item">
+                  <a
+                    class="soc-networks__link soc-networks__link--dark-theme"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    ><svg class="soc-networks__icon">
+                      <use href="./images/icons.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="soc-networks__item">
+                  <a
+                    class="soc-networks__link soc-networks__link--dark-theme"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    ><svg class="soc-networks__icon">
+                      <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="join-us">
-            <p class="footer__title">приєднуйтесь</p>
-            <ul class="soc-networks">
-              <li class="soc-networks__item">
-                <a
-                  class="soc-networks__link soc-networks__link--dark-theme"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  ><svg class="soc-networks__icon">
-                    <use href="./images/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc-networks__item">
-                <a
-                  class="soc-networks__link soc-networks__link--dark-theme"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  <svg class="soc-networks__icon">
-                    <use href="./images/icons.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc-networks__item">
-                <a
-                  class="soc-networks__link soc-networks__link--dark-theme"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  ><svg class="soc-networks__icon">
-                    <use href="./images/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="soc-networks__item">
-                <a
-                  class="soc-networks__link soc-networks__link--dark-theme"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  ><svg class="soc-networks__icon">
-                    <use href="./images/icons.svg#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+
           <div class="sign-us">
             <p class="footer__title">Підпишіться на розсилку</p>
             <form class="sign-us__form">
-              <label>
+              <label class="sign-us__label">
                 <input type="email" class="sign-us__input" placeholder="E-mail" />
               </label>
               <button type="submit" class="sign-us-button">
@@ -384,5 +502,54 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mbile-menu -->
+
+    <div class="mobile-menu-container js-menu-container" id="mobile-menu">
+      <button class="mobile-menu__button-close js-close-menu">
+        <svg class="mobile-menu__icon">
+          <use href="./images/icons.svg#close-menu-mobile"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu">
+        <ul class="mobile-menu__nav">
+          <li class="mobile-menu__nav-item">
+            <a href="./index.html" class="mobile-menu__nav-link">Студія</a>
+          </li>
+          <li class="mobile-menu__nav-item">
+            <a href="./portfolio.html" class="mobile-menu__nav-link">Портфоліо</a>
+          </li>
+          <li class="mobile-menu__nav-item">
+            <a href="#" class="mobile-menu__nav-link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__contacts">
+          <li class="mobile-menu__contacts-item">
+            <a href="#" class="mobile-menu__contacts-link">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-menu__contacts-item">
+            <a href="#" class="mobile-menu__contacts-link">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__soc">
+          <li class="mobile-menu__soc-item">
+            <a href="#" class="mobile-menu__soc-link">Instagram</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a href="#" class="mobile-menu__soc-link">Twitter</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a href="#" class="mobile-menu__soc-link">Facebook</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a href="#" class="mobile-menu__soc-link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

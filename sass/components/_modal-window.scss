@@ -25,9 +25,6 @@
   position: relative;
   width: 100%;
 
-  // min-width: 528px;
-  // min-height: 581px;
-
   @include for-phone {
     width: 450px;
 
@@ -40,6 +37,7 @@
   @include for-desktop {
     width: 528px;
   }
+
   padding: 40px;
 
   background-color: var(--main-background-color);

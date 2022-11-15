@@ -43,3 +43,24 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 }
+
+@mixin mobile-button() {
+  @include centeredFlex();
+
+  min-width: 40px;
+  min-height: 40px;
+
+  background-color: transparent;
+  color: var(--title-text-color);
+  cursor: pointer;
+  border: none;
+
+  @include for-tablet {
+    display: none;
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}

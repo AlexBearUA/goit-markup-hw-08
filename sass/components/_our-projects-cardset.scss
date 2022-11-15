@@ -5,11 +5,20 @@
 }
 
 .our-projects__item {
-  flex-basis: 370px;
+  width: 450px;
+  @include for-tablet {
+    width: 354px;
+  }
+  @include for-desktop {
+    width: 370px;
+  }
 }
 
 .our-projects__link {
-  display: block;
+  display: flex;
+
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition: box-shadow var(--time-transition) var(--time-func);
 
@@ -21,6 +30,7 @@
 }
 
 .our-projects__thumb {
+  flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -58,7 +68,7 @@
   background: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
 
-  transform: translateY(100.1%);
+  transform: translateY(100.2%);
   transition: transform var(--time-transition) var(--time-func);
 
   font-size: 18px;

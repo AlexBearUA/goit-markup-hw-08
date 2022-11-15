@@ -7,13 +7,6 @@
 .header__nav-list,
 .header__contacts-list {
   display: flex;
-  align-items: center;
-}
-
-.header__navigation {
-  @media screen and (max-width: 767px) {
-    padding: 10px 0;
-  }
 }
 
 .header-menu {
@@ -83,9 +76,9 @@
 
 .header__contacts-list {
   flex-direction: column;
-  align-items: flex-start;
-
+  justify-content: center;
   margin-left: auto;
+
   @include for-desktop {
     flex-direction: row;
   }
@@ -93,7 +86,7 @@
 
 .header__contacts-item:not(:last-child) {
   @include for-desktop {
-    margin-right: 30px;
+    margin-right: 40px;
   }
 }
 

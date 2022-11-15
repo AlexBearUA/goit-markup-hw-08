@@ -14,10 +14,8 @@
 }
 
 .our-team__item {
-  width: 450px;
-  @media screen and (max-width: 479px) {
-    width: 100%;
-  }
+  max-width: 450px;
+
   @include for-tablet {
     width: 354px;
   }
