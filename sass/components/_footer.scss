@@ -1,4 +1,4 @@
-.footer {
+footer {
   padding: 60px 0;
   background-color: var(--secondary-background-color);
 }
@@ -24,7 +24,7 @@
   @include for-tablet {
     flex-direction: row;
     align-items: baseline;
-    gap: 0;
+
     justify-content: space-around;
   }
 
