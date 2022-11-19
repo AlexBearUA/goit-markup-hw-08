@@ -1,20 +1,12 @@
 .advantages {
-  @include for-tablet {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .advantages__item {
   list-style-type: none;
   max-width: 450px;
-
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
-    }
-  }
 
   @include for-tablet {
     width: 354px;
