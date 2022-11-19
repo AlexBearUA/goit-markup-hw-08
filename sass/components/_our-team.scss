@@ -5,12 +5,7 @@
 .our-team {
   display: flex;
   gap: 30px;
-  flex-direction: column;
-
-  @include for-tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 }
 
 .our-team__item {
