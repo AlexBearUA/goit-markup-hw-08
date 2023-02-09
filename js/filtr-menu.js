@@ -2,9 +2,6 @@ const filtrButtonsContainer = document.querySelector('ul.projects-filtr');
 
 const filtrAllCards = [...document.querySelectorAll('ul.our-projects li')];
 
-console.log(filtrAllCards);
-console.log(typeof filtrAllCards);
-
 filtrButtonsContainer.addEventListener('click', filtrBtnClickHandler);
 
 function filtrBtnClickHandler(evt) {
@@ -24,20 +21,20 @@ function filtrBtnClickHandler(evt) {
 
   filtredCards();
 
-  function cleanCardsFilter() {
-    filtrAllCards.reduce((previousValue, element, index, array) => {
-      return element.classList.remove('visually-hidden');
-    });
+  function filtredCards() {
+    filtrAllCards.reduce((previousValue, element) => {
+      if (nextActiveBtn.dataset.value === element.dataset.value) {
+        return element;
+      } else if (nextActiveBtn.dataset.value === 'all') {
+        return cleanCardsFilter();
+      }
+      return element.classList.add('visually-hidden');
+    }, 0);
   }
 
-  function filtredCards() {
-    filtrAllCards.reduce((previousValue, element, index, array) => {
-      if (element.dataset.value === nextActiveBtn.dataset.value) {
-        return element;
-      }
-
-      return element.classList.add('visually-hidden');
-    });
-    console.log(nextActiveBtn.dataset.value);
+  function cleanCardsFilter() {
+    filtrAllCards.reduce((previousValue, element) => {
+      return element.classList.remove('visually-hidden');
+    }, 0);
   }
 }
