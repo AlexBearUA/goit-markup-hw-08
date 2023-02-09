@@ -9,13 +9,13 @@ function filtrBtnClickHandler(evt) {
     return;
   }
 
-  const currentActiveBtn = document.querySelector('.projects-filtr__button--active');
+  const previousActiveBtn = document.querySelector('.projects-filtr__button--active');
 
-  currentActiveBtn.classList.remove('projects-filtr__button--active');
+  previousActiveBtn.classList.remove('projects-filtr__button--active');
 
-  const nextActiveBtn = evt.target;
+  const currentActiveBtn = evt.target;
 
-  nextActiveBtn.classList.add('projects-filtr__button--active');
+  currentActiveBtn.classList.add('projects-filtr__button--active');
 
   cleanCardsFilter();
 
@@ -23,9 +23,9 @@ function filtrBtnClickHandler(evt) {
 
   function filtredCards() {
     filtrAllCards.reduce((previousValue, element) => {
-      if (nextActiveBtn.dataset.value === element.dataset.value) {
+      if (currentActiveBtn.dataset.value === element.dataset.value) {
         return element;
-      } else if (nextActiveBtn.dataset.value === 'all') {
+      } else if (currentActiveBtn.dataset.value === 'all') {
         return cleanCardsFilter();
       }
       return element.classList.add('visually-hidden');
