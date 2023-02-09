@@ -82,20 +82,40 @@
 
           <ul class="projects-filtr">
             <li>
-              <button class="projects-filtr__button projects-filtr__button--active" type="button">
+              <button
+                class="projects-filtr__button projects-filtr__button--active"
+                type="button"
+                data-value="all"
+              >
                 Усі
               </button>
             </li>
-            <li><button class="projects-filtr__button" type="button">Веб-сайти</button></li>
-            <li><button class="projects-filtr__button" type="button">Додатки</button></li>
-            <li><button class="projects-filtr__button" type="button">Дизайн</button></li>
-            <li><button class="projects-filtr__button" type="button">Маркетинг</button></li>
+            <li>
+              <button class="projects-filtr__button" type="button" data-value="web">
+                Веб-сайти
+              </button>
+            </li>
+            <li>
+              <button class="projects-filtr__button" type="button" data-value="apps">
+                Додатки
+              </button>
+            </li>
+            <li>
+              <button class="projects-filtr__button" type="button" data-value="design">
+                Дизайн
+              </button>
+            </li>
+            <li>
+              <button class="projects-filtr__button" type="button" data-value="marketing">
+                Маркетинг
+              </button>
+            </li>
           </ul>
 
           <!-- Cardset -->
 
           <ul class="our-projects">
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="web">
               <a
                 class="our-projects__link"
                 href="#"
@@ -130,7 +150,7 @@
                 </div></a
               >
             </li>
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="design">
               <a
                 class="our-projects__link"
                 href="#"
@@ -163,7 +183,7 @@
                 </div>
               </a>
             </li>
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="apps">
               <a
                 class="our-projects__link"
                 href="#"
@@ -197,7 +217,7 @@
                 </div></a
               >
             </li>
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="marketing">
               <a
                 class="our-projects__link"
                 href="#"
@@ -231,7 +251,7 @@
                 </div></a
               >
             </li>
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="apps">
               <a
                 class="our-projects__link"
                 href="#"
@@ -265,7 +285,7 @@
                 </div></a
               >
             </li>
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="web">
               <a
                 class="our-projects__link"
                 href="#"
@@ -299,7 +319,7 @@
                 </div></a
               >
             </li>
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="design">
               <a
                 class="our-projects__link"
                 href="#"
@@ -333,7 +353,7 @@
                 </div></a
               >
             </li>
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="marketing">
               <a
                 class="our-projects__link"
                 href="#"
@@ -366,7 +386,7 @@
                 </div></a
               >
             </li>
-            <li class="our-projects__item">
+            <li class="our-projects__item" data-value="apps">
               <a
                 class="our-projects__link"
                 href="#"
@@ -551,5 +571,6 @@
     <!-- Scripts -->
 
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/filtr-menu.js"></script>
   </body>
 </html>
